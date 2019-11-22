@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="a1.css">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <center>
+<input id='name' type="text"  placeholder="Enter Your Name">
+<br>
+<br>
+<button id='btn' type="button"> Click me</button>
+<div id="div1"></div>
+
+</center>
+
+    <script>
+       var e=document.getElementById('name')
+       console.log(e)
+
+       var e1=document.getElementById('btn')
+       console.log(e1)
+
+        function fun1(div_name, data){
+            document.getElementById(div_name).innerText += data;
+        }
+        document.getElementById("btn").addEventListener('click', function() {
+          var user = document.getElementById("name");
+          var value = user.value.trim();
+          if(value)
+          fun1("div1", value+"\n");
+          user.value = "";
+        });
+    </script>
+
+</body>
+</html>
